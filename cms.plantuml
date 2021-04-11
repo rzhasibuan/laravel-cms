@@ -1,0 +1,45 @@
+@startuml testdot
+entity users{
+    * id varchar
+    --
+    username varchar
+    password varchar
+    created_at datetime
+
+}
+
+entity category_article{
+    * id varchar 
+    --
+    name varchar
+}
+
+entity article{
+    * id varchar
+    --
+    categori_article_id varchar
+    judul varchar
+    isi_article varchar
+    thumbnail varchar 
+    users_id varchar
+    tag varchar
+    tanggal datetime
+}
+
+entity post {
+    * id varchar
+    article_id varchar
+    status varchar
+}
+
+entity comment {
+    * id varchar
+    post_id varchar
+    user_id varchar
+    comment text 
+}
+
+
+
+@endunl
+
